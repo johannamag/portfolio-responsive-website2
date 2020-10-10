@@ -2,5 +2,68 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: apple;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.hero__section {
+  background: #202040;
+  padding: 0 60px;
+  color: #fff;
+}
+
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 820px;
+}
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.col-left h1 {
+  font-size: 90px;
+}
+
+.col-left p {
+  font-size: 16px;
+  line-height: 2.3;
+}
+
+.col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .hero__section {
+    padding: 30px;
+  }
+  .hero__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .col-left h1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .hero__wrapper {
+    grid-template-rows: 600px;
+  }
+
+  .col-left h1 {
+    font-size: 32px;
+  }
 }
